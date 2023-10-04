@@ -1,25 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'; 
 
 
 function Blog() {
-    const [valor,setValor] = useState('')
-    const nagito = (e) => {
-e.preventDefault();
-setValor('');
-}
+const [texto,setTexto] = useState("")
 function HandleChange(e){
-setValor(e.target.value);
+setTexto(e.target.value);
 
 }
+
+
     
-    return ( 
-        <>
-            <form onSubmit={nagito}>
-                <input type="text" placeholder='Nota' onChange={HandleChange} value={valor} />
-                <button>Submit</button>
-            </form>
-        </>
-     );
+    return( 
+    <>
+   <textarea placeholder='Escribi tu Blog' onChange={HandleChange} cols="30" rows="10"/> 
+   <Markdown remarkPlugins={[remarkGfm]}>{texto}</Markdown>
+    </>
+ );
 }
 
 export default Blog;
