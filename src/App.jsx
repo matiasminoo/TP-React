@@ -1,10 +1,10 @@
 import './App.css';
 import Blog from './components/blog';
-
+import {Link} from 'react-router-dom'
 function App() {
   return (
     <>
-    
+     <Link to="/markdown">Ir a pagina de Markdown</Link>
       <Blog/> 
     </>
   );

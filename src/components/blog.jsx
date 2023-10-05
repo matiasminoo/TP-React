@@ -5,17 +5,43 @@ import remarkGfm from 'remark-gfm';
 
 function Blog() {
 const [texto,setTexto] = useState("")
-function HandleChange(e){
-setTexto(e.target.value);
+const [nombre,setNombre] = useState("")
+const [titulo,setTitulo] = useState("")
+const [arr,setArr] = useState([])
 
+
+
+function HandleSubmit(e){
+e.preventDefault()
+let cont = {text : texto, title : titulo , name : nombre}
+setArr([...arr, cont])
+console.log([...arr, cont]);
+setNombre("")
+setTitulo("")
+setTexto("")
 }
-
-
     
     return( 
     <>
-   <textarea placeholder='Escribi tu Blog' onChange={HandleChange} cols="30" rows="10"/> 
-   <Markdown remarkPlugins={[remarkGfm]}>{texto}</Markdown>
+    <form onSubmit={HandleSubmit}>
+    <input value={nombre} type="text" placeholder='Escribi tu nombre' onChange={e => setNombre(e.target.value)}/>
+    <input  value={titulo} type="text" placeholder='escribi tu titulo' onChange={e => setTitulo(e.target.value)}/>
+    <hr />
+   
+   <textarea value={texto} placeholder='Escribi tu Blog' onChange={e => setTexto(e.target.value)} cols="30" rows="10"/>
+   <br></br>
+   <button>Create form</button>
+   </form>
+   {arr.map( cosa => (
+       <>
+    <h1>{cosa.title}</h1>
+    <h2>{cosa.name}</h2>
+    <Markdown remarkPlugins={[remarkGfm]}>{cosa.text}</Markdown> 
+</>
+   ))}
+
+  {/* <span>{contenido.title}</span> <span> {contenido.name}</span>
+   <Markdown remarkPlugins={[remarkGfm]}>{contenido.text}</Markdown> */}
     </>
  );
 }
