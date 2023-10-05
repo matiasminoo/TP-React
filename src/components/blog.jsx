@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import Markdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'; 
+import {Link} from 'react-router-dom'
+import { 
+    BrowserRouter, 
+    Routes, 
+    Route 
+  } from 'react-router-dom';
 
 
-function Blog() {
+function Blog(props) {
+const { arr, setArr } = props;
 const [texto,setTexto] = useState("")
 const [nombre,setNombre] = useState("")
 const [titulo,setTitulo] = useState("")
-const [arr,setArr] = useState([])
+
 
 
 
@@ -23,25 +28,18 @@ setTexto("")
     
     return( 
     <>
+             <Routes>
+       <Route path="/" element={<Link to="/">Ir a pagina a HOME</Link>}/>
+      </Routes>
     <form onSubmit={HandleSubmit}>
     <input value={nombre} type="text" placeholder='Escribi tu nombre' onChange={e => setNombre(e.target.value)}/>
     <input  value={titulo} type="text" placeholder='escribi tu titulo' onChange={e => setTitulo(e.target.value)}/>
     <hr />
    
-   <textarea value={texto} placeholder='Escribi tu Blog' onChange={e => setTexto(e.target.value)} cols="30" rows="10"/>
+   <textarea value={texto} placeholder='Escribi tu Blog' onChange={e => setTexto(e.target.value)} cols="40" rows="10"/>
    <br></br>
    <button>Create form</button>
    </form>
-   {arr.map( cosa => (
-       <>
-    <h1>{cosa.title}</h1>
-    <h2>{cosa.name}</h2>
-    <Markdown remarkPlugins={[remarkGfm]}>{cosa.text}</Markdown> 
-</>
-   ))}
-
-  {/* <span>{contenido.title}</span> <span> {contenido.name}</span>
-   <Markdown remarkPlugins={[remarkGfm]}>{contenido.text}</Markdown> */}
     </>
  );
 }
