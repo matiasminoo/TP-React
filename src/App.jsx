@@ -1,7 +1,6 @@
 import "./App.css";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Blog from "./components/blog";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 function App() {
