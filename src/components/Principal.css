@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+    background-color: #0b2d46;
+}
+.lista {
+    padding-left: 0%;
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+   justify-content:  space-around;
+   align-items: center;
+   background-color: rgb(26, 26, 26);
+   height: 15vh;
+   width: 100%;
+}
+.ruta{
+
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
+
+}
