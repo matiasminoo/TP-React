@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+    background-color: #0b2d46;
+}
+
+
+.post-item {
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: rgb(214, 213, 213);
+    width: 60vw;
+}
+
+
+.post-link {
+    text-decoration: none;
+    color: #007bff;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
+
+.delete-button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+
+.admin-notification {
+    color: green;
+}
+
+
+.nav-menu {
+    background-color: #333;
+    color: #fff;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
