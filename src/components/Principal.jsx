@@ -34,12 +34,12 @@ function Principal(props) {
             <Link  to="/blog">Publicar tu post</Link>
           </li>
           <li>
-            <Link  to="/Admin">Ir a modo Admin</Link>
+            <Link  to="https://www.mercadopago.com.ar/">Apoyanos</Link>
           </li>
         </ul>
       </nav>
       </header>
-      {admin && <h1 className= "admin-notificacion">Modo Admin Activado👨🏻‍💻</h1>}
+      {admin && <h1 className= "admin-notificacion">Modo Admin Activado🔑</h1>}
       {arr.map((cosa) => (
         <div className="contenedor">
           <Link to={`/post/${cosa.id}`} className= "post-link">
@@ -51,7 +51,7 @@ function Principal(props) {
               </Markdown>
             </div>
           </Link>
-          {admin && <button className="delete-button" onClick={() => HandleClick(cosa)}>borrar</button>}
+          {admin && <button className="delete-button" onClick={() => HandleClick(cosa)}>Borrar</button>}
           </div>
       ))}
     </div>

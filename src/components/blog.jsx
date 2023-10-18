@@ -25,7 +25,7 @@ useEffect(() => {
 
 function HandleSubmit(e){
 e.preventDefault()
-
+if(texto && titulo && autor){
 const id = contador;
 
 let cont = {text : texto, title : titulo , name : autor, id : id}
@@ -37,6 +37,7 @@ setAutor("")
 setTitulo("")
 setTexto("")
 navigate(`/post/${cont.id}`)
+}
 }
     
     return( 
@@ -52,7 +53,7 @@ navigate(`/post/${cont.id}`)
             <Link  to="/blog">Publicar tu post</Link>
           </li>
           <li>
-            <Link  to="/Admin">Ir a modo Admin</Link>
+          <Link  to="https://www.mercadopago.com.ar/">Apoyanos</Link>
           </li>
         </ul>
       </nav>

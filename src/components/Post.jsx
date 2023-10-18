@@ -15,8 +15,9 @@ function Post() {
 
   useEffect(() => {
     let cosasGuardadas = JSON.parse(localStorage.getItem("post"));
+    let numid = +id;
     let PostEspecifico = cosasGuardadas.filter(
-      (publicaciones) => publicaciones.id == id
+      (publicaciones) => publicaciones.id === numid
     );
     setArr(PostEspecifico[0]);
 
@@ -24,10 +25,11 @@ function Post() {
       localStorage.getItem(`comentarios${id}`)
     );
     if (ComentariosAnteriores) setTodosComentarios(ComentariosAnteriores);
-  }, []);
+  }, [id]);
 
   function HandleSubmit(e) {
     e.preventDefault();
+    if(comentador && texto){
     let comentarios = [
       ...todosComentarios,
       { nombre: comentador, texto: texto },
@@ -35,7 +37,7 @@ function Post() {
     setTodosComentarios(comentarios);
     localStorage.setItem(`comentarios${id}`, JSON.stringify(comentarios));
     setComentador("");
-    setTexto("");
+    setTexto("");}
   }
 
   return (
@@ -51,7 +53,7 @@ function Post() {
             <Link  to="/blog">Publicar tu post</Link>
           </li>
           <li>
-            <Link  to="/Admin">Ir a modo Admin</Link>
+          <Link  to="https://www.mercadopago.com.ar/">Apoyanos</Link>
           </li>
         </ul>
       </nav>

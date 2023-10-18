@@ -8,39 +8,47 @@ flex-direction: column;
 
 }
 .admin-form{
-    margin-top: 10vh;
 width: 30vw;
-height: 20vh;
+height: 40vh;
 background-color:#24303c;;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+border-radius: 5px;
 
 }
 .admin-input{
-    width: 25.8vw;
+    height: 4vh;
+    width: 25vw;
     background: #24303c;
     padding: 10px;
     border-radius: 4px;
-    margin-bottom: 16px;
+    margin-bottom: 30vh;
+    margin-top: 5vh;
     border: 1px solid #1f53c5;
     font-family: 'calibri';
     font-size: 18px;
     color: white;
+    position: fixed;
 }
 .admin-button {
     background-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
+    padding:10px;
+    margin-top: 1vh;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
+    transition: all 0.3s;
+    width: 25vw;
 }
 
 .admin-button:hover {
-    background-color: #0056b3;
+    background-color: #24303c;
+    border: 2px solid #007bff;
+    border-radius: 5px;
 }
 
 

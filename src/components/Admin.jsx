@@ -5,7 +5,7 @@ import './admin.css'
 
 function Admin(props) {
     const navigate = useNavigate();
-    const {admin, setAdmin} = props;
+    const {setAdmin} = props;
     const [pass, setPass] = useState("");
     const [error,setError] = useState("");
     const [ver,setVer] = useState("password");
@@ -13,7 +13,7 @@ function Admin(props) {
 
     function HandleSubmit(e) {
         e.preventDefault();
-        if(pass == "react"){
+        if(pass === "react"){
             setAdmin(true);
             navigate('/');
         }else {
@@ -24,7 +24,7 @@ function Admin(props) {
     }
     function ViewPass(e){
         e.preventDefault()
-    if(ver == "password"){
+    if(ver === "password"){
     setVer("text")
  }else{ setVer("password")}
 
@@ -43,7 +43,7 @@ function Admin(props) {
             <Link  to="/blog">Publicar tu post</Link>
           </li>
           <li>
-            <Link  to="/Admin">Ir a modo Admin</Link>
+          <Link  to="https://www.mercadopago.com.ar/">Apoyanos</Link>
           </li>
         </ul>
       </nav>
@@ -53,7 +53,7 @@ function Admin(props) {
             <form className= "admin-form">
                 <input className= "admin-input" value={pass} type= {ver} placeholder= "Ingresa la contraseña" onChange={e => setPass(e.target.value)} />
                 <button className="admin-button" onClick={ViewPass} >Ver contraseña 🔐</button>
-                <button className="admin-button"  onClick={HandleSubmit}>enviar</button>
+                <button  className="admin-button"  onClick={HandleSubmit}>Enviar</button>
             </form></div>
             
         </>
