@@ -1,0 +1,50 @@
+.ContenedorGeneral{
+width: 100vw;
+height: 83vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+.admin-form{
+    margin-top: 10vh;
+width: 30vw;
+height: 20vh;
+background-color:#24303c;;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.admin-input{
+    width: 25.8vw;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+.admin-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.admin-button:hover {
+    background-color: #0056b3;
+}
+
+
+.admin-error {
+    color: red;
+    margin-top: 10px;
+}

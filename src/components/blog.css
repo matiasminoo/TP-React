@@ -1,0 +1,43 @@
+.formulario {
+    width: 27vw;
+    background: #24303c;
+    padding: 3vw;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .formulario h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .datos {
+    width: 25.8vw;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+    resize: none; /* Evitar que el textarea sea redimensionable */
+  }
+  
+  
+  .formulario .boton {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+  }
